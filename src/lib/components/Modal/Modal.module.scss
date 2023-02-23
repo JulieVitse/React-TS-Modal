@@ -1,0 +1,29 @@
+.modal{
+    position: relative;
+    z-index: 2;
+    max-width: 500px;
+    width: 90%;
+    box-shadow: 0 0 10px black;
+    padding: 15px 30px;
+    border-radius: 8px;
+    display: flex;
+    align-items: center;
+    &__content{
+        font-size: 20px;
+        font-weight: 500;
+        text-align: left;
+    }
+    &__btn{
+        position: absolute;
+        top: -12.5px;
+        right: -12.5px;
+        display: block;
+        width: 30px;
+        height: 30px;
+        text-indent: -9999px;
+        background-size: contain;
+        background-repeat: no-repeat;
+        background-position: center center;
+        cursor: pointer;
+    }
+}

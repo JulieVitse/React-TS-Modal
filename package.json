@@ -1,7 +1,6 @@
 {
-  "name": "react-modal",
+  "name": "julie-v-react-modal",
   "version": "0.1.0",
-  "private": true,
   "dependencies": {
     "@testing-library/jest-dom": "^5.14.1",
     "@testing-library/react": "^13.0.0",
@@ -10,15 +9,14 @@
     "@types/node": "^16.7.13",
     "@types/react": "^18.0.0",
     "@types/react-dom": "^18.0.0",
-    "react": "^18.2.0",
-    "react-dom": "^18.2.0",
-    "react-scripts": "5.0.1",
+    "node-sass": "^8.0.0",
     "typescript": "^4.4.2",
     "web-vitals": "^2.1.0"
   },
+  "main": "dist/index.js",  "module": "dist/index.js",  "files": [ "dist", "README.md" ],  "repository": {    "type": "git",    "url": "https://github.com/JulieVitse/OC-P14-React-Modal.git"  },
   "scripts": {
     "start": "react-scripts start",
-    "build": "react-scripts build",
+    "build": "rm -rf dist && NODE_ENV=production babel src/lib --out-dir dist --copy-files --ignore __tests__,spec.js,test.js,__snapshots__",
     "test": "react-scripts test",
     "eject": "react-scripts eject"
   },
@@ -39,5 +37,12 @@
       "last 1 firefox version",
       "last 1 safari version"
     ]
+  },
+  "devDependencies": {
+    "babel-cli": "^6.26.0",
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0",
+    "react-scripts": "5.0.1"
   }
+  
 }
