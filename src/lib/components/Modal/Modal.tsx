@@ -1,19 +1,23 @@
-import styles from '../lib/components/Modal/Modal.module.css'
-import btnClose from 'src/assets/btn_close.png'
-
+import './modal.scss'
+import btnClose from 'lib/assets/btn-close.png'
 interface modalProps {
-  closeModal: () => void
+  closeModal: () => void,
+  isOpen: boolean,
 }
 
-export function Modal({ closeModal }: modalProps) {
+export function Modal({ isOpen, closeModal }: modalProps) {
   return (
-    <div className={styles.modal}>
-      <div
-        onClick={closeModal}
-        style={{ backgroundImage: `url(${btnClose})` }}
-        className={styles.modal__btn}
-      ></div>
-      <p className={styles.modal__content}>Modal Content</p>
-    </div>
+    <>
+      {!isOpen ? null : (
+        <div className="modal">
+          <div
+            onClick={closeModal}
+            style={{ backgroundImage: `url(${btnClose})` }}
+            className="modal__btn"
+          ></div>
+          <p className="modal__content">Modal Content</p>
+        </div>
+      )}
+    </>
   )
 }

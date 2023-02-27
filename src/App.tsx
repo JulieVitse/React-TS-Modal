@@ -1,26 +1,17 @@
-import { useState } from 'react'
 import './App.css'
 import { Modal } from './lib/components/Modal/Modal'
+import { useModal } from './lib/components/Modal/useModal'
 
 function App() {
-  const [showModal, setShowModal] = useState(false)
-
-  const handleOpenModal = () => {
-    setShowModal(true)
-  }
-
-  const handleCloseModal = () => {
-    setShowModal(false)
-  }
-
+  const { isOpen, openModal, closeModal } = useModal()
   return (
     <div className="App">
       <header className="App-header">
         <p>React Modal Demo</p>
-        <button className="btn" onClick={handleOpenModal}>
+        <button className="btn" onClick={openModal}>
           Open Modal
         </button>
-        {showModal && <Modal closeModal={handleCloseModal} />}
+        <Modal isOpen={isOpen} closeModal={closeModal} />
       </header>
     </div>
   )
