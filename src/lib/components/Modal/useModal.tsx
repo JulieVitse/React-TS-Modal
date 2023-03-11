@@ -2,8 +2,12 @@ import { useState } from "react"
 
 export const useModal = () => {
   const [isOpen, setIsOpen] = useState(false)
+  const [modalToOpen, setModalToOpen] = useState(null)
 
-  function openModal() {
+  console.log("modalToOpen", modalToOpen)
+
+  function openModal(e: any = null) {
+    setModalToOpen(e)
     setIsOpen(true)
   }
 
@@ -14,7 +18,8 @@ export const useModal = () => {
   return {
     isOpen,
     openModal,
-    closeModal
+    closeModal,
+    modalToOpen,
   }
 }
 
