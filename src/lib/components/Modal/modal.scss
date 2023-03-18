@@ -1,10 +1,21 @@
+.wrapper{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    position: absolute;
+    width: 100%;
+    top: 0;
+}
+
 .modal__overlay{
     position: absolute;
     top: 0;
     left: 0;
     width: 100%;
     height: 100%;
-    background-color: rgba(0, 0, 0, 0.301);
+    background-color: rgba(255, 255, 255, 0.301);
     z-index: 1;
     backdrop-filter: blur(2px);
 }
@@ -14,7 +25,7 @@
     z-index: 2;
     max-width: 500px;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.178);
-    padding: 1rem 2rem;
+    padding: 2rem;
     border-radius: 8px;
     display: flex;
     flex-direction: column;
@@ -24,11 +35,13 @@
         display: flex;
         flex-direction: column;
         align-items: flex-start;
+        margin-bottom: 2rem;
         &__title{
             font-size: 2rem;
             font-weight: 600;
             text-align: center;
             margin: 0;
+            color: #9494f5;
         }
         &__text{
             font-size: 1rem;
@@ -37,13 +50,13 @@
         &__html{
             font-size: 1.3rem;
             font-weight: 400;
-            color: darkcyan;
+            color: #f594a4;
         }
     }
     &__btn{
         position: absolute;
-        top: 0;
-        right: 0;
+        top: -5px;
+        right: -15px;
         padding: 1rem 2rem;
         cursor: pointer;
         background: transparent;
@@ -56,6 +69,25 @@
             color: #b34040d0;
             transform: scale(1.2) rotate(90deg);
             font-weight: 700;
+        }
+    }
+    &__btnClose{
+        border: none;
+        border-radius: 7px;
+        padding: .7rem;
+        width: 100px;
+        background: #9494f5;
+        color: white;
+        font-weight: 500;
+        font-size: 16px;
+        align-self: flex-end;
+        cursor: pointer;
+        transition: all 0.5s ease;
+        box-sizing: border-box;
+        &:hover{
+            color: #9494f5;
+            background: white;
+            box-shadow: 0 0 25px #9494f563;
         }
     }
 }
