@@ -35,6 +35,7 @@ export function Modal({
   animationClass,
   animationDuration,
   onAfterClose,
+  afterCloseEventDelay,
   showSpinner,
   customSpinner,
   spinnerDuration,
@@ -68,7 +69,7 @@ export function Modal({
   }
   const handleCloseEvent = () => {
     closeModal()
-    onAfterClose && onAfterClose()
+    onAfterClose && setTimeout(() => onAfterClose(), afterCloseEventDelay)
   }
 
   return (

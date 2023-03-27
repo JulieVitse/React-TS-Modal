@@ -19,6 +19,7 @@ interface IModalOptionalProps {
   isAnimated?: boolean
   modalVisible?: string
   onAfterClose?: () => void
+  afterCloseEventDelay?: number
   animationDuration?: string
   showSpinner?: boolean
   customSpinner?: string
