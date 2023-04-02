@@ -18,6 +18,13 @@ import { useEffect, useState } from 'react'
  * @param animationDuration string - duration of the animation
  * @param modalVisible string - class name of the modal when it is visible
  * @param onAfterClose function - function to be executed after the modal is closed
+ * @param afterCloseEventDelay number - delay in ms before the onAfterClose function is executed
+ * @param showSpinner boolean - indicates if the spinner is displayed
+ * @param customSpinner string - custom spinner to be displayed
+ * @param spinnerDuration number - duration in ms of the spinner
+ * @param modalClass string - class name of the modal
+ * @param overlayClass string - class name of the overlay
+ * @param children ReactNode - children to be displayed in the modal
  * @returns
  */
 export function Modal({
@@ -39,6 +46,9 @@ export function Modal({
   showSpinner,
   customSpinner,
   spinnerDuration,
+  modalClass,
+  overlayClass,
+  children
 }: IModalProps) {
   
   const [loading, setLoading] = useState(showSpinner)
@@ -75,15 +85,19 @@ export function Modal({
   return (
     <>
       <div
-        className={`wrapper ${isOpen ? modalVisible : ''} ${ animationClass && animationClass}`}
-        style={{ transitionDuration: animationDuration ? animationDuration : '' }}
+        className={`wrapper ${isOpen ? modalVisible : ''} ${
+          animationClass && animationClass
+        }`}
+        style={{
+          transitionDuration: animationDuration ? animationDuration : '',
+        }}
       >
         <div
-          className="modal__overlay"
+          className={`modal__overlay ${overlayClass ? overlayClass : ''}`}
           onClick={clickOverlayClose ? handleCloseEvent : undefined}
         ></div>
 
-        <div className={`modal`}>
+        <div className={`modal ${modalClass ? modalClass : ''}`}>
           {showSpinner && loading && (
             <div className="modal__spinner">
               <div className="lds-roller">
@@ -99,13 +113,14 @@ export function Modal({
             </div>
           )}
           {showSpinner && loading && customSpinner && (
-           <div
+            <div
               className="modal__spinner"
               dangerouslySetInnerHTML={{ __html: customSpinner }}
-            /> 
+            />
           )}
 
           <div className="modal__content">
+            {children && children}
             {modalTitle && (
               <h2 className="modal__content__title">{modalTitle}</h2>
             )}

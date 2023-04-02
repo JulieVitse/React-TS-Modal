@@ -6,6 +6,7 @@ interface ITestComponentProps {
 
 export function TestComponent( { name }: ITestComponentProps ) {
   return (
+    
     <form>
       <h1>{name}</h1>
       <label htmlFor="name">Name</label>

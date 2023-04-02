@@ -16,7 +16,6 @@ interface IModalOptionalProps {
   modalTitle?: string
   ChildComponent?: ReactNode
   animationClass?: string
-  isAnimated?: boolean
   modalVisible?: string
   onAfterClose?: () => void
   afterCloseEventDelay?: number
@@ -24,6 +23,9 @@ interface IModalOptionalProps {
   showSpinner?: boolean
   customSpinner?: string
   spinnerDuration?: number
+  modalClass?: string
+  overlayClass?: string
+  children?: ReactNode
 }
 // All modal props
 export interface IModalProps extends IModalRequiredProps, IModalOptionalProps {}
@@ -33,16 +35,19 @@ export const defaultProps: IModalOptionalProps = {
   clickOverlayClose: true,
   showClose: true,
   closeText: 'Close',
-  textContent: '',
+  textContent: undefined,
   htmlContent: null,
-  modalTitle: '',
+  modalTitle: undefined,
   ChildComponent: null,
-  animationClass: undefined,
-  isAnimated: true,
+  animationClass: 'fade',
   modalVisible: 'visible',
   onAfterClose: () => {},
+  afterCloseEventDelay: 0,
   animationDuration: '.3s',
   showSpinner: false,
   customSpinner: undefined,
   spinnerDuration: 1000,
+  modalClass: undefined,
+  overlayClass: undefined,
+  children: null
 }
