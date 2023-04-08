@@ -25,7 +25,7 @@ import { useEffect, useState } from 'react'
  * @param modalClass string - class name of the modal
  * @param overlayClass string - class name of the overlay
  * @param children ReactNode - children to be displayed in the modal
- * @returns
+ * @returns JSX.Element - modal component
  */
 export function Modal({
   isOpen,
