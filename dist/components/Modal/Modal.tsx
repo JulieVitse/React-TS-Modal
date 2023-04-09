@@ -1,7 +1,6 @@
 import './modal.scss'
 import { IModalProps, defaultProps } from '../../types/modalTypes'
 import { useEffect, useState } from 'react'
-import React from 'react'
 
 /**
  *
@@ -85,6 +84,7 @@ export function Modal({
 
   return (
     <>
+      
       <div
         className={`wrapper ${isOpen ? modalVisible : ''} ${
           animationClass && animationClass
