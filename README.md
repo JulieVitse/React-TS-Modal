@@ -109,9 +109,9 @@ function App() {
   return (
     <div>
       <button onClick={() => openModal()}>
-      {/*in the case of multiple modals, pass your custom name in the parameter of the function like so:
-      <button onClick={() => openModal(openModalConfirm)}>
-      <button onClick={() => openModal(openModalForm)}>*/}
+      {/*in the case of multiple modals, use your custom name for the function:
+      <button onClick={() => openModalConfirm()}>
+      <button onClick={() => openModalForm()}>*/}
       <Modal
         isOpen={isOpen} {/* use custom name for multiple modals*/}
         closeModal={closeModal} {/* use custom name for multiple modals*/}
