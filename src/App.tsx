@@ -6,28 +6,6 @@ import { Overview } from './docs/Overview'
 import React from 'react'
 
 function App() {
-  // if you only need one modal you can use this hook
-  //const { isOpen, openModal, closeModal } = useModal()
-  // if you need more than one modal, you need to use different names for the hooks
-  /*  const {
-    isOpen: isOpen1,
-    openModal: openModal1,
-    closeModal: closeModal1,
-  } = useModal()
-  const {
-    isOpen: isOpen2,
-    openModal: openModal2,
-    closeModal: closeModal2,
-  } = useModal()
-
-  const onAfterCloseFunction = () => {
-    alert('Modal closed')
-  }
-  function onAfterCloseFunction() {
-    alert('Modal closed')
-    //console.log('Modal closed')
-  } */
-
   return (
     <React.Fragment>
       <Router>

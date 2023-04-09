@@ -84,6 +84,7 @@ export function Modal({
 
   return (
     <>
+      
       <div
         className={`wrapper ${isOpen ? modalVisible : ''} ${
           animationClass && animationClass

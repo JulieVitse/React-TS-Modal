@@ -2,18 +2,21 @@ nav{
     position: fixed;
     top: 0;
     left: 0;
-    margin-top: 10%;
+    height: 100vh;
 }
 
 .navList{
     display: flex;
     flex-direction: column;
+    position: relative;
+    top: 20%;
+    padding: 0 2rem;
     & a{
         color: #282c34;
         text-decoration: none;
         font-size: 1.2rem;
         font-weight: 500;
-        padding: 1rem 0;
+        padding: 1.5rem;
         transition: all 0.3s ease-in-out;
         &:hover{
             color: #9494f5;

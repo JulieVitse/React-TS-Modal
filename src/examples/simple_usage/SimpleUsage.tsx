@@ -6,8 +6,7 @@ export function SimpleUsage() {
   const { isOpen, openModal, closeModal } = useModal()
 
   return (
-    <div className="example-wrapper">
-      <p>Simple modal usage</p>
+    <>
       <button className="btn" onClick={() => openModal()}>
         Open Modal
       </button>
@@ -18,6 +17,6 @@ export function SimpleUsage() {
       >
         <p>Simple modal content</p>
         </Modal>
-    </div>
+    </>
   )
 }

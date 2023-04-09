@@ -1,7 +1,7 @@
 interface IPropDesc {
-  name: string
-  value: any
-  description: string
+  name?: string
+  value?: any
+  description?: string
 }
 
 export function PropDesc({ name, value, description }: IPropDesc) {
