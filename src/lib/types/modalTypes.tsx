@@ -6,7 +6,7 @@ export interface IModalRequiredProps {
   isOpen: boolean
 }
 // Optional props
-interface IModalOptionalProps {
+export interface IModalOptionalProps {
   escToClose?: boolean
   clickOverlayClose?: boolean
   showClose?: boolean
