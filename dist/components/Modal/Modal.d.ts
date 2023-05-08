@@ -26,7 +26,8 @@ import { IModalProps } from '../../types/modalTypes';
  * @param children ReactNode - children to be displayed in the modal
  * @returns JSX.Element - modal component
  */
-export declare function Modal({ isOpen, modalVisible, closeModal, escToClose, clickOverlayClose, showClose, closeText, textContent, htmlContent, modalTitle, ChildComponent, animationClass, animationDuration, onAfterClose, afterCloseEventDelay, showSpinner, customSpinner, spinnerDuration, modalClass, overlayClass, children }: IModalProps): JSX.Element;
-export declare namespace Modal {
+declare function Modal({ isOpen, modalVisible, closeModal, escToClose, clickOverlayClose, showClose, closeText, textContent, htmlContent, modalTitle, ChildComponent, animationClass, animationDuration, onAfterClose, afterCloseEventDelay, showSpinner, customSpinner, spinnerDuration, modalClass, overlayClass, children }: IModalProps): JSX.Element;
+declare namespace Modal {
     var defaultProps: import("../../types/modalTypes").IModalOptionalProps;
 }
+export default Modal;

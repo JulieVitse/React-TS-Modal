@@ -27,7 +27,7 @@ import { useEffect, useState } from 'react'
  * @param children ReactNode - children to be displayed in the modal
  * @returns JSX.Element - modal component
  */
-export function Modal({
+function Modal({
   isOpen,
   modalVisible,
   closeModal,
@@ -151,3 +151,5 @@ export function Modal({
 }
 
 Modal.defaultProps = defaultProps
+
+export default Modal
