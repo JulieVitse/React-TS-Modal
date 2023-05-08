@@ -1,9 +1,9 @@
 {
-  "name": "julie-v-react-modal",
-  "description": "React custom Modal",
+  "name": "julie-react-ts-modal",
+  "description": "React custom Modal component",
   "author": "Julie Vitse",
   "license": "ISC",
-  "version": "1.0.4",
+  "version": "0.0.1",
   "private": false,
   "main": "dist/index.js",
   "module": "dist/index.js",
