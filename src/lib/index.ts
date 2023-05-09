@@ -4,3 +4,4 @@ import { IModalProps } from './types/modalTypes'
 import './components/Modal/modal.scss'
 export { Modal, useModal }
 export type { IModalProps }
+
