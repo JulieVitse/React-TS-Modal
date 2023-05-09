@@ -24,7 +24,7 @@
   },
   "scripts": {
     "clean": "rm -rf dist",
-    "build": "npm run clean && tsc && npm run build-scss && cp package.json README.md ./dist",
+    "build": "npm run clean && tsc && npm run build-scss && cp src/lib/components/Modal/modal.scss dist/components/Modal && cp package.json README.md dist",
     "build-scss": "node-sass --include-path ./src/lib -o ./dist --output-style compressed ./src/lib/index.scss"
   },
   "devDependencies": {
