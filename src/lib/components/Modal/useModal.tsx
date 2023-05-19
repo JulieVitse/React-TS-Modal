@@ -10,11 +10,13 @@ export const useModal = () => {
   function closeModal() {
     setIsOpen(false)
   }
-
-  if (isOpen) {
-    document.body.style.overflow = "hidden"
-  } else {
-    document.body.style.overflow = "auto"
+  
+  if (typeof window !== "undefined") {
+    if (isOpen) {
+      document.body.style.overflow = 'hidden'
+    } else {
+      document.body.style.overflow = 'auto'
+    }
   }
 
   return {
