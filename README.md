@@ -55,9 +55,9 @@
 To install, you can use [npm](https://npmjs.org/), [yarn](https://yarnpkg.com/) or [pnpm](https://pnpm.io/installation).
 
 ```
-$ npm install julie-v-react-modal
-$ yarn add julie-v-react-modal
-$ pnpm add julie-v-react-modal
+$ npm install julie-react-ts-modal
+$ yarn add julie-react-ts-modal
+$ pnpm add julie-react-ts-modal
  ```
 
 
@@ -85,7 +85,7 @@ The documentation contains the description of all the props available for the mo
 Here is a simple example of the modal being used in an app.
 
 ```Javascript
-import { Modal, useModal } from 'julie-v-react-modal'
+import { Modal, useModal } from 'julie-react-ts-modal'
 import React from 'react'
 import ReactDOM from 'react-dom/client'
 

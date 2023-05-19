@@ -1,5 +1,5 @@
 import { jsx as _jsx, jsxs as _jsxs, Fragment as _Fragment } from "react/jsx-runtime";
-import './modal.scss';
+//import './modal.scss'
 import { defaultProps } from '../../types/modalTypes';
 import { useEffect, useState } from 'react';
 /**

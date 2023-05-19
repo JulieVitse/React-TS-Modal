@@ -1,5 +1,4 @@
 /// <reference types="react" />
-import './modal.scss';
 import { IModalProps } from '../../types/modalTypes';
 /**
  *

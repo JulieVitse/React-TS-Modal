@@ -1,4 +1,4 @@
-import './modal.scss'
+//import './modal.scss'
 import { IModalProps, defaultProps } from '../../types/modalTypes'
 import { useEffect, useState } from 'react'
 
