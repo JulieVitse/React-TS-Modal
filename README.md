@@ -70,9 +70,6 @@ $ pnpm add julie-react-ts-modal
 
 The basic documentation can be consulted here: [Documentation](https://jv-react-modal-doc.netlify.app/)
 
-You can also access it by cloning this project and running it locally with 
-``` $ yarn start ```
-
 The documentation contains the description of all the props available for the modal component, and examples of usage.
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
@@ -129,7 +126,6 @@ root.render(
   </React.StrictMode>
 )
 ```
-More examples are available in the ``` examples ``` directory of this project.
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
 
