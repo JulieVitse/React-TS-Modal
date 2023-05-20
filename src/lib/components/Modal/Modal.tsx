@@ -143,9 +143,13 @@ function Modal({
           )}
         </div>
       </div>
-      {escToClose
+      { typeof window !== 'undefined' &&
+      escToClose
         ? window.addEventListener('keydown', handleEscClose)
-        : window.removeEventListener('keydown', handleEscClose)}
+        : window.removeEventListener('keydown', handleEscClose)
+      
+      }
+      
     </>
   )
 }

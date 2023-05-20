@@ -55,9 +55,9 @@
 To install, you can use [npm](https://npmjs.org/), [yarn](https://yarnpkg.com/) or [pnpm](https://pnpm.io/installation).
 
 ```
-$ npm install julie-v-react-modal
-$ yarn add julie-v-react-modal
-$ pnpm add julie-v-react-modal
+$ npm install julie-react-ts-modal
+$ yarn add julie-react-ts-modal
+$ pnpm add julie-react-ts-modal
  ```
 
 
@@ -69,9 +69,6 @@ $ pnpm add julie-v-react-modal
 ## Documentation
 
 The basic documentation can be consulted here: [Documentation](https://jv-react-modal-doc.netlify.app/)
-
-You can also access it by cloning this project and running it locally with 
-``` $ yarn start ```
 
 The documentation contains the description of all the props available for the modal component, and examples of usage.
 
@@ -85,7 +82,7 @@ The documentation contains the description of all the props available for the mo
 Here is a simple example of the modal being used in an app.
 
 ```Javascript
-import { Modal, useModal } from 'julie-v-react-modal'
+import { Modal, useModal } from 'julie-react-ts-modal'
 import React from 'react'
 import ReactDOM from 'react-dom/client'
 
@@ -129,7 +126,6 @@ root.render(
   </React.StrictMode>
 )
 ```
-More examples are available in the ``` examples ``` directory of this project.
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
 
