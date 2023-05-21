@@ -72,11 +72,11 @@ function Modal({
     }
   }, [isOpen, showSpinner, spinnerDuration])
 
-  const handleEscClose = (e: any) => {
+  /* const handleEscClose = (e: any) => {
     if (e.key === 'Escape') {
       closeModal()
     }
-  }
+  } */
   const handleCloseEvent = () => {
     closeModal()
     onAfterClose && setTimeout(() => onAfterClose(), afterCloseEventDelay)
@@ -143,13 +143,7 @@ function Modal({
           )}
         </div>
       </div>
-      { typeof window !== 'undefined' &&
-      escToClose
-        ? window.addEventListener('keydown', handleEscClose)
-        : window.removeEventListener('keydown', handleEscClose)
-      
-      }
-      
+      {escToClose ? escToClose : null}
     </>
   )
 }

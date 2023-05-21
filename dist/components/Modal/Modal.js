@@ -48,21 +48,18 @@ function Modal({ isOpen, modalVisible, closeModal, escToClose, clickOverlayClose
             }, 500);
         }
     }, [isOpen, showSpinner, spinnerDuration]);
-    const handleEscClose = (e) => {
-        if (e.key === 'Escape') {
-            closeModal();
-        }
-    };
+    /* const handleEscClose = (e: any) => {
+      if (e.key === 'Escape') {
+        closeModal()
+      }
+    } */
     const handleCloseEvent = () => {
         closeModal();
         onAfterClose && setTimeout(() => onAfterClose(), afterCloseEventDelay);
     };
     return (_jsxs(_Fragment, { children: [_jsxs("div", Object.assign({ className: `wrapper ${isOpen ? modalVisible : ''} ${animationClass && animationClass}`, style: {
                     transitionDuration: animationDuration ? animationDuration : '',
-                } }, { children: [_jsx("div", { className: `modal__overlay ${overlayClass ? overlayClass : ''}`, onClick: clickOverlayClose ? handleCloseEvent : undefined }), _jsxs("div", Object.assign({ className: `modal ${modalClass ? modalClass : ''}` }, { children: [showSpinner && loading && (_jsx("div", Object.assign({ className: "modal__spinner" }, { children: _jsxs("div", Object.assign({ className: "lds-roller" }, { children: [_jsx("div", {}), _jsx("div", {}), _jsx("div", {}), _jsx("div", {}), _jsx("div", {}), _jsx("div", {}), _jsx("div", {}), _jsx("div", {})] })) }))), showSpinner && loading && customSpinner && (_jsx("div", { className: "modal__spinner", dangerouslySetInnerHTML: { __html: customSpinner } })), _jsxs("div", Object.assign({ className: "modal__content" }, { children: [children && children, modalTitle && (_jsx("h2", Object.assign({ className: "modal__content__title" }, { children: modalTitle }))), ChildComponent ? ChildComponent : null, textContent && (_jsx("p", Object.assign({ className: "modal__content__text" }, { children: textContent }))), htmlContent && (_jsx("div", { className: "modal__content__html", dangerouslySetInnerHTML: { __html: htmlContent } }))] })), showClose && (_jsx("button", Object.assign({ className: "modal__btn", onClick: handleCloseEvent }, { children: closeText })))] }))] })), typeof window !== 'undefined' &&
-                escToClose
-                ? window.addEventListener('keydown', handleEscClose)
-                : window.removeEventListener('keydown', handleEscClose)] }));
+                } }, { children: [_jsx("div", { className: `modal__overlay ${overlayClass ? overlayClass : ''}`, onClick: clickOverlayClose ? handleCloseEvent : undefined }), _jsxs("div", Object.assign({ className: `modal ${modalClass ? modalClass : ''}` }, { children: [showSpinner && loading && (_jsx("div", Object.assign({ className: "modal__spinner" }, { children: _jsxs("div", Object.assign({ className: "lds-roller" }, { children: [_jsx("div", {}), _jsx("div", {}), _jsx("div", {}), _jsx("div", {}), _jsx("div", {}), _jsx("div", {}), _jsx("div", {}), _jsx("div", {})] })) }))), showSpinner && loading && customSpinner && (_jsx("div", { className: "modal__spinner", dangerouslySetInnerHTML: { __html: customSpinner } })), _jsxs("div", Object.assign({ className: "modal__content" }, { children: [children && children, modalTitle && (_jsx("h2", Object.assign({ className: "modal__content__title" }, { children: modalTitle }))), ChildComponent ? ChildComponent : null, textContent && (_jsx("p", Object.assign({ className: "modal__content__text" }, { children: textContent }))), htmlContent && (_jsx("div", { className: "modal__content__html", dangerouslySetInnerHTML: { __html: htmlContent } }))] })), showClose && (_jsx("button", Object.assign({ className: "modal__btn", onClick: handleCloseEvent }, { children: closeText })))] }))] })), escToClose ? escToClose : null] }));
 }
 Modal.defaultProps = defaultProps;
 export default Modal;
