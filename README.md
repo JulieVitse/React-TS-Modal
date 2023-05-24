@@ -82,13 +82,14 @@ The documentation contains the description of all the props available for the mo
 Here is a simple example of the modal being used in an app.
 
 ```Javascript
-import { Modal, useModal } from 'julie-react-ts-modal'
 import React from 'react'
 import ReactDOM from 'react-dom/client'
+import { Modal, useModal } from 'julie-react-ts-modal'
+import 'julie-react-ts-modal/dist/index.css' // if you are using Next, place this import in your _app.js or _app.ts file.
 
 function App() {
   // if you only need one modal, use this hook
-  const { isOpen, openModal, closeModal } = useModal()
+  const { isOpen, openModal, closeModal, handleEscClose } = useModal()
   
   // if you need more than one modal, you need to use different names for the hooks.
   // for example, if you have a confirmation modal and a modal with a form, you can do this:
@@ -96,11 +97,13 @@ function App() {
     isOpen: isOpenForm,
     openModal: openModalForm,
     closeModal: closeModalForm,
+    handleEscClose: handleEscCloseForm
   } = useModal()
   const {
     isOpen: isOpenConfirm,
     openModal: openModalConfirm,
     closeModal: closeModalConfirm,
+    handleEscClose: handleEscCloseConfirm
   } = useModal()
 
   return (
@@ -112,6 +115,7 @@ function App() {
       <Modal
         isOpen={isOpen} {/* use custom name for multiple modals*/}
         closeModal={closeModal} {/* use custom name for multiple modals*/}
+        handleEscClose={handleEscClose} {/* use custom name for multiple modals*/}
         modalTitle={"My custom modal"}
         textContent={"Lorem ipsum dolor sit amet"}
       />
