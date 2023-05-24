@@ -4,8 +4,8 @@ export interface IModalRequiredProps {
     isOpen: boolean;
 }
 export interface IModalOptionalProps {
-    escToClose?: boolean;
     clickOverlayClose?: boolean;
+    handleEscClose?: () => void;
     showClose?: boolean;
     closeText?: string;
     textContent?: string;

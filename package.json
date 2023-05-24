@@ -3,7 +3,7 @@
   "description": "React custom Modal component",
   "author": "Julie Vitse",
   "license": "ISC",
-  "version": "0.2.2",
+  "version": "1.0.0",
   "private": false,
   "main": "dist/index.js",
   "module": "dist/index.js",
@@ -25,7 +25,7 @@
   "scripts": {
     "clean": "rm -rf dist",
     "build": "npm run clean && tsc && npm run build-scss && cp src/lib/components/Modal/modal.scss dist/components/Modal && cp package.json README.md dist",
-    "build-scss": "node-sass --include-path ./src/lib -o ./dist --output-style compressed ./src/lib/index.scss" 
+    "build-scss": "node-sass --include-path ./src/lib -o ./dist --output-style compressed ./src/lib/index.scss"
   },
   "devDependencies": {
     "react": "^18.2.0",

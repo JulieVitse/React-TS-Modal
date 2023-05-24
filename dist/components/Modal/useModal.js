@@ -1,36 +1,35 @@
-import { useState } from "react";
+import { useState } from 'react';
 export const useModal = () => {
     const [isOpen, setIsOpen] = useState(false);
-    let escToClose = true;
     function openModal() {
         setIsOpen(true);
     }
     function closeModal() {
         setIsOpen(false);
     }
-    function handleEscClose(e) {
-        if (e.key === 'Escape') {
-            closeModal();
-        }
+    // Close modal when pressing ESC key
+    function handleEscClose() {
+        if (typeof window === 'undefined')
+            return;
+        window.addEventListener('keydown', function (e) {
+            if (e.key === 'Escape' && isOpen) {
+                setIsOpen(false);
+            }
+        });
     }
-    if (typeof window !== "undefined") {
+    // Prevent scrolling when modal is open
+    if (typeof window !== 'undefined') {
         if (isOpen) {
             document.body.style.overflow = 'hidden';
         }
         else {
             document.body.style.overflow = 'auto';
         }
-        if (escToClose) {
-            window.addEventListener('keydown', handleEscClose);
-        }
-        else {
-            window.removeEventListener('keydown', handleEscClose);
-        }
     }
     return {
         isOpen,
         openModal,
         closeModal,
-        escToClose
+        handleEscClose,
     };
 };

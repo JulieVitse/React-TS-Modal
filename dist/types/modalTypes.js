@@ -1,7 +1,7 @@
 // Default props
 export const defaultProps = {
-    escToClose: true,
     clickOverlayClose: true,
+    handleEscClose: () => { },
     showClose: true,
     closeText: 'Close',
     textContent: undefined,

@@ -7,8 +7,8 @@ export interface IModalRequiredProps {
 }
 // Optional props
 export interface IModalOptionalProps {
-  escToClose?: boolean
   clickOverlayClose?: boolean
+  handleEscClose?: () => void
   showClose?: boolean
   closeText?: string
   textContent?: string
@@ -31,8 +31,8 @@ export interface IModalOptionalProps {
 export interface IModalProps extends IModalRequiredProps, IModalOptionalProps {}
 // Default props
 export const defaultProps: IModalOptionalProps = {
-  escToClose: true,
   clickOverlayClose: true,
+  handleEscClose: () => {},
   showClose: true,
   closeText: 'Close',
   textContent: undefined,
